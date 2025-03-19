@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\program files\\unrealengine\\chapter_1\\source\\chapter_1\\chapter_1.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\program files\\unrealengine\\chapter_1\\intermediate\\build\\win64\\x64\\chapter_1editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\program files\\unrealengine\\chapter_1\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\chapter_1\\definitions.chapter_1.h",
+            "c:\\program files\\unrealengine\\chapter_1\\source\\chapter_1\\chapter_1.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,18 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Chapter_1.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\Chapter_1Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\Chapter_1.init.gen.cpp.obj"
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\Chapter_1Character.gen.cpp.obj"
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\Chapter_1GameMode.gen.cpp.obj"
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\Chapter_1.cpp.obj"
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\Chapter_1Character.cpp.obj"
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\Chapter_1GameMode.cpp.obj"
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\PerModuleInline.gen.cpp.obj"
+"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\Default.rc2.res"
+/OUT:"C:\Program Files\UnrealEngine\Chapter_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Chapter_1\UnrealEditor-Chapter_1.lib"
