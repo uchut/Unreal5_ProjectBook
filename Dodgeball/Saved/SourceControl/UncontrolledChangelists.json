@@ -1,0 +1,16 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/ThirdPerson/Input/Actions/IC_Character.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/BP_EnemyCharacter.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/8/TG/M0B86I6IES21JWB1D6GLPI.uasset"
+			]
+		}
+	]
+}
