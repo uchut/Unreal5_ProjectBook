@@ -54,10 +54,28 @@
     <ClCompile Include="..\..\Source\Dodgeball\DodgeballGameMode.h">
       <Filter>Source\Dodgeball</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\DodgeballProjectile.cpp">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\DodgeballProjectile.h">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Dodgeball\EnemyCharacter.cpp">
       <Filter>Source\Dodgeball</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Dodgeball\EnemyCharacter.h">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\VictoryBox.cpp">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\VictoryBox.h">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\Wall.cpp">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\Wall.h">
       <Filter>Source\Dodgeball</Filter>
     </ClCompile>
   </ItemGroup>

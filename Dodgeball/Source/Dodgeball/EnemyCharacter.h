@@ -31,9 +31,25 @@ protected:
 
 	// Change the rotation of the character to face the given actor
 	// Returns whether the given actor can be seen
-	void LookAtActor(const AActor* TargetActor);
+	bool LookAtActor(AActor* TargetActor);
 
 	// Can we see the given actor
-	bool CanSeeActor(const AActor* TargetActor) const;
+	bool CanSeeActor(AActor* TargetActor);
+
+	void ThrowDodgeball();
+
+	//Whether the enemy can see the player this frame
+	bool bCanSeePlayer = false;
+	//Whether the enemy could see the player last frame
+	bool bPreviousCanSeePlayer = false;
+
+	FTimerHandle ThrowTimerHandle;
+
+	float ThrowingInterval = 2.f;
+	float ThrowingDelay = 0.5f;
+
+	//The class used to spawn a dodgeball object
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Dodgeball)
+	TSubclassOf<class ADodgeballProjectile> DodgeballClass;
 
 };

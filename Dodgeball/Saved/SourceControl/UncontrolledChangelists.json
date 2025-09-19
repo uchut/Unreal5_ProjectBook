@@ -9,7 +9,17 @@
 				"C:/Unreal5_ProjectBook/Dodgeball/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
 				"C:/Unreal5_ProjectBook/Dodgeball/Content/ThirdPerson/Input/Actions/IC_Character.uasset",
 				"C:/Unreal5_ProjectBook/Dodgeball/Content/BP_EnemyCharacter.uasset",
-				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/8/TG/M0B86I6IES21JWB1D6GLPI.uasset"
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/8/TG/M0B86I6IES21JWB1D6GLPI.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/BP_DodgeballProjectile.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/Physics/PM_Dodgeball.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/6/HF/9H7TKAXH9DD8KI3TIXGI2I.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/BP_GhostWall.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/A/ZB/YBSMVYQVEJUEAQLP7ENEKS.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/A/E6/1OFDNN8NPMKIZMCISHOIWW.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/D/L3/C38JYXNBLWSPDNLJ3T1GWA.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/8/PE/F3LX9DBY7763T0JJO5Q4XV.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/7/CO/AAVAY5POW4FXR1C72IANX2.uasset",
+				"C:/Unreal5_ProjectBook/Dodgeball/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/8/SD/WE7CV4KRVTL1NA77M9Q3QI.uasset"
 			]
 		}
 	]

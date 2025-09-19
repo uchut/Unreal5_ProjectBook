@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\unreal5_projectbook\\dodgeball\\intermediate\\build\\win64\\unrealeditor\\inc\\dodgeball\\uht\\dodgeballprojectile.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\unreal5_projectbook\\dodgeball\\intermediate\\build\\win64\\x64\\dodgeballeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\unreal5_projectbook\\dodgeball\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dodgeball\\definitions.dodgeball.h",
+            "c:\\unreal5_projectbook\\dodgeball\\source\\dodgeball\\dodgeballprojectile.h",
+            "c:\\unreal5_projectbook\\dodgeball\\intermediate\\build\\win64\\unrealeditor\\inc\\dodgeball\\uht\\dodgeballprojectile.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
