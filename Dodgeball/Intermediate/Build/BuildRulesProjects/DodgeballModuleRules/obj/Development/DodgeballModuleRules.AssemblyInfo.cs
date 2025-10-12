@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DodgeballModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9004e2c7ad953bd2e9665b5f6625bdf4b6783fc9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cbd7fa22a0e57f54071e8d033aa8e550366f497")]
 [assembly: System.Reflection.AssemblyProductAttribute("DodgeballModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DodgeballModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

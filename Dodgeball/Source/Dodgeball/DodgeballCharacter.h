@@ -5,10 +5,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
+#include "HealthInterface.h"
 #include "DodgeballCharacter.generated.h"
 
 UCLASS(config=Game)
-class ADodgeballCharacter : public ACharacter
+class ADodgeballCharacter : public ACharacter, public IHealthInterface
 {
 	GENERATED_BODY()
 
@@ -22,12 +23,15 @@ class ADodgeballCharacter : public ACharacter
 public:
 	ADodgeballCharacter();
 
+	virtual void OnDeath_Implementation() override;
+
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Input)
 	float TurnRateGamepad;
 
 	UPROPERTY(EditAnywhere, Category = Input)
 	class UInputMappingContext* IC_Character;
+
 
 	UPROPERTY(EditAnywhere, Category = Input)
 	class UInputAction* IA_Move;
@@ -46,6 +50,10 @@ protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	// End of APawn interface
+
+private:
+
+	class UHealthComponent* HealthComponent;
 
 public:
 	/** Returns CameraBoom subobject **/

@@ -23,11 +23,20 @@ protected:
 
 	virtual void BeginPlay() override;
 
+	// The damage the dodgeball will deal to the player's character
+	UPROPERTY(EditAnywhere, Category = Damage)
+	float Damage = 34.f;
+
 public:	
 
 	ADodgeballProjectile();
 
 	virtual void Tick(float DeltaTime) override;
+
+	FORCEINLINE UProjectileMovementComponent* GetProjectileMovementComponent() const
+	{
+		return ProjectileMovement;
+	}
 
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp,

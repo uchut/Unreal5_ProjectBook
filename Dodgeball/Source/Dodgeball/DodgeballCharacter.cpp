@@ -12,6 +12,9 @@
 #include "InputMappingContext.h"
 #include "InputAction.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "HealthComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
+//#include "DodgeballPlayerController.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ADodgeballCharacter
@@ -56,12 +59,21 @@ ADodgeballCharacter::ADodgeballCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
-	//HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health Component"));
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health Component"));
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
+void ADodgeballCharacter::OnDeath_Implementation()
+{
+	/*ADodgeballPlayerController* PlayerController = Cast<ADodgeballPlayerController>(GetController());
+	if (PlayerController != nullptr)
+	{
+		PlayerController->ShowRestartWidget();
+	}*/
+	UKismetSystemLibrary::QuitGame(this, nullptr, EQuitPreference::Quit, true);
+}
 
 //////////////////////////////////////////////////////////////////////////
 // Input

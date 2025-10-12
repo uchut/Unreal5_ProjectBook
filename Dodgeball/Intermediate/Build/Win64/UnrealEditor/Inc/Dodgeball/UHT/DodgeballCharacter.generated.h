@@ -14,16 +14,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define DODGEBALL_DodgeballCharacter_generated_h
 
-#define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADodgeballCharacter(); \
 	friend struct Z_Construct_UClass_ADodgeballCharacter_Statics; \
 public: \
 	DECLARE_CLASS(ADodgeballCharacter, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Dodgeball"), NO_API) \
-	DECLARE_SERIALIZER(ADodgeballCharacter)
+	DECLARE_SERIALIZER(ADodgeballCharacter) \
+	virtual UObject* _getUObject() const override { return const_cast<ADodgeballCharacter*>(this); }
 
 
-#define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ADodgeballCharacter(ADodgeballCharacter&&); \
@@ -35,12 +36,12 @@ public: \
 	NO_API virtual ~ADodgeballCharacter();
 
 
-#define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_10_PROLOG
-#define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_13_GENERATED_BODY \
+#define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_11_PROLOG
+#define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

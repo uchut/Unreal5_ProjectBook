@@ -2,11 +2,12 @@
 
 #include "EnemyCharacter.h"
 #include "Engine/World.h"
-#include "DrawDebugHelpers.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "TimerManager.h"
 #include "DodgeballProjectile.h"
+#include "DodgeballFunctionLibrary.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 
 // Sets default values
 AEnemyCharacter::AEnemyCharacter()
@@ -31,7 +32,7 @@ void AEnemyCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	// Fetch the character currently being controlled by the player
-	ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+	ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
 
 	// Look at the player character every frame
 	bCanSeePlayer = LookAtActor(PlayerCharacter);
@@ -58,11 +59,15 @@ void AEnemyCharacter::Tick(float DeltaTime)
 	bPreviousCanSeePlayer = bCanSeePlayer;
 }
 
-bool AEnemyCharacter::LookAtActor(AActor * TargetActor)
+bool AEnemyCharacter::LookAtActor(const AActor * TargetActor)
 {
 	if (TargetActor == nullptr) return false;
 
-	if (CanSeeActor(TargetActor))
+	const TArray<const AActor*> IgnoreActors = { this, TargetActor };
+	if (UDodgeballFunctionLibrary::CanSeeActor(GetWorld(),
+											   SightSource->GetComponentLocation(),
+											   TargetActor,
+											   IgnoreActors))
 	{
 		FVector Start = GetActorLocation();
 		FVector End = TargetActor->GetActorLocation();
@@ -77,35 +82,6 @@ bool AEnemyCharacter::LookAtActor(AActor * TargetActor)
 	return false;
 }
 
-bool AEnemyCharacter::CanSeeActor(AActor * TargetActor)
-{
-	if (TargetActor == nullptr) return false;
-
-	// Store the results of the Line Trace
-	FHitResult Hit;
-
-	// Where the Line Trace starts and ends
-	FVector Start = SightSource->GetComponentLocation();
-	FVector End = TargetActor->GetActorLocation();
-
-	// The trace channel we want to compare against
-	ECollisionChannel Channel = ECollisionChannel::ECC_GameTraceChannel1;
-
-	FCollisionQueryParams QueryParams;
-	// Ignore the actor that's executing this Line Trace
-	QueryParams.AddIgnoredActor(this);
-	// And the target we're checking for
-	QueryParams.AddIgnoredActor(TargetActor);
-
-	// Execute the Line Trace
-	GetWorld()->LineTraceSingleByChannel(Hit, Start, End, Channel, QueryParams);
-
-	// Show the Line Trace inside the game
-	DrawDebugLine(GetWorld(), Start, End, FColor::Red);
-
-	return !Hit.bBlockingHit;
-}
-
 void AEnemyCharacter::ThrowDodgeball()
 {
 	if (DodgeballClass == nullptr)
@@ -116,7 +92,38 @@ void AEnemyCharacter::ThrowDodgeball()
 	FVector ForwardVector = GetActorForwardVector();
 	float SpawnDistance = 40.f;
 	FVector SpawnLocation = GetActorLocation() + (ForwardVector * SpawnDistance);
+	FTransform SpawnTransform(GetActorRotation(), SpawnLocation);
+
 	//Spawn new dodgeball
-	GetWorld()->SpawnActor<ADodgeballProjectile>(DodgeballClass, SpawnLocation, GetActorRotation());
+	ADodgeballProjectile* Projectile = GetWorld()->SpawnActorDeferred<ADodgeballProjectile>(DodgeballClass, SpawnTransform);
+
+	Projectile->GetProjectileMovementComponent()->InitialSpeed = 2200.f;
+	Projectile->FinishSpawning(SpawnTransform);
+
 }
+
+	// 아래는 제미나이 피셜 sphere component 대신 자식 sphere를 collision 설정했을 때 적용할 코드
+	// EnemyCharacter.cpp의 ThrowDodgeball 함수 안
+
+	//FVector ForwardVector = GetActorForwardVector();
+	//float SpawnDistance = 40.f;
+	//FVector SpawnLocation = GetActorLocation() + (ForwardVector * SpawnDistance);
+	//FTransform SpawnTransform(GetActorRotation(), SpawnLocation);
+
+	//// Spawn new dodgeball
+	//// 충돌 처리 옵션을 함수에 직접 전달합니다.
+	//ADodgeballProjectile* Projectile = GetWorld()->SpawnActorDeferred<ADodgeballProjectile>(
+	//	DodgeballClass,
+	//	SpawnTransform,
+	//	nullptr,
+	//	nullptr,
+	//	ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn
+	//);
+
+	//// 스폰이 성공했는지 확인한 후 나머지 로직을 실행합니다.
+	//if (Projectile != nullptr)
+	//{
+	//	Projectile->GetProjectileMovementComponent()->InitialSpeed = 2200.f;
+	//	Projectile->FinishSpawning(SpawnTransform);
+	//}
 

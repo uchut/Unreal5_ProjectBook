@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\unreal5_projectbook\\dodgeball\\source\\dodgeball\\healthcomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\unreal5_projectbook\\dodgeball\\intermediate\\build\\win64\\x64\\dodgeballeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\unreal5_projectbook\\dodgeball\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dodgeball\\definitions.dodgeball.h",
+            "c:\\unreal5_projectbook\\dodgeball\\source\\dodgeball\\healthcomponent.h",
+            "c:\\unreal5_projectbook\\dodgeball\\intermediate\\build\\win64\\unrealeditor\\inc\\dodgeball\\uht\\healthcomponent.generated.h",
+            "c:\\unreal5_projectbook\\dodgeball\\source\\dodgeball\\healthinterface.h",
+            "c:\\unreal5_projectbook\\dodgeball\\intermediate\\build\\win64\\unrealeditor\\inc\\dodgeball\\uht\\healthinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -31,10 +31,7 @@ protected:
 
 	// Change the rotation of the character to face the given actor
 	// Returns whether the given actor can be seen
-	bool LookAtActor(AActor* TargetActor);
-
-	// Can we see the given actor
-	bool CanSeeActor(AActor* TargetActor);
+	bool LookAtActor(const AActor* TargetActor);
 
 	void ThrowDodgeball();
 
