@@ -65,12 +65,62 @@ DEFINE_FUNCTION(IHealthInterface::execOnDeath)
 }
 // End Interface UHealthInterface Function OnDeath
 
+// Begin Interface UHealthInterface Function OnTakeDamage
+void IHealthInterface::OnTakeDamage()
+{
+	check(0 && "Do not directly call Event functions in Interfaces. Call Execute_OnTakeDamage instead.");
+}
+static FName NAME_UHealthInterface_OnTakeDamage = FName(TEXT("OnTakeDamage"));
+void IHealthInterface::Execute_OnTakeDamage(UObject* O)
+{
+	check(O != NULL);
+	check(O->GetClass()->ImplementsInterface(UHealthInterface::StaticClass()));
+	UFunction* const Func = O->FindFunction(NAME_UHealthInterface_OnTakeDamage);
+	if (Func)
+	{
+		O->ProcessEvent(Func, NULL);
+	}
+	else if (auto I = (IHealthInterface*)(O->GetNativeInterfaceAddress(UHealthInterface::StaticClass())))
+	{
+		I->OnTakeDamage_Implementation();
+	}
+}
+struct Z_Construct_UFunction_UHealthInterface_OnTakeDamage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Health" },
+		{ "ModuleRelativePath", "HealthInterface.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHealthInterface_OnTakeDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHealthInterface, nullptr, "OnTakeDamage", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHealthInterface_OnTakeDamage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHealthInterface_OnTakeDamage_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UHealthInterface_OnTakeDamage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UHealthInterface_OnTakeDamage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(IHealthInterface::execOnTakeDamage)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTakeDamage_Implementation();
+	P_NATIVE_END;
+}
+// End Interface UHealthInterface Function OnTakeDamage
+
 // Begin Interface UHealthInterface
 void UHealthInterface::StaticRegisterNativesUHealthInterface()
 {
 	UClass* Class = UHealthInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnDeath", &IHealthInterface::execOnDeath },
+		{ "OnTakeDamage", &IHealthInterface::execOnTakeDamage },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -89,6 +139,7 @@ struct Z_Construct_UClass_UHealthInterface_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UHealthInterface_OnDeath, "OnDeath" }, // 874051915
+		{ &Z_Construct_UFunction_UHealthInterface_OnTakeDamage, "OnTakeDamage" }, // 1616314102
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -137,10 +188,10 @@ UHealthInterface::~UHealthInterface() {}
 struct Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthInterface_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UHealthInterface, UHealthInterface::StaticClass, TEXT("UHealthInterface"), &Z_Registration_Info_UClass_UHealthInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHealthInterface), 2312806298U) },
+		{ Z_Construct_UClass_UHealthInterface, UHealthInterface::StaticClass, TEXT("UHealthInterface"), &Z_Registration_Info_UClass_UHealthInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHealthInterface), 414425506U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthInterface_h_957924689(TEXT("/Script/Dodgeball"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthInterface_h_1928542681(TEXT("/Script/Dodgeball"),
 	Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthInterface_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthInterface_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

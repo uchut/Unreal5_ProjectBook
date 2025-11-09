@@ -20,14 +20,15 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	// The owner's initial and current amount health points
 	UPROPERTY(EditDefaultsOnly, Category = Health)
-	float Health = 100.f;
+		float Health = 100.f;
 
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	// Take health points from its owner
 	void LoseHealth(float Amount);
+
+	FORCEINLINE float GetHealthPercent() const { return Health / 100.f; }
+		
 };

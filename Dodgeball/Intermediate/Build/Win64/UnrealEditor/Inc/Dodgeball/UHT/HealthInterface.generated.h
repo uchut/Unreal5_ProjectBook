@@ -15,6 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define DODGEBALL_HealthInterface_generated_h
 
 #define FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthInterface_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnTakeDamage); \
 	DECLARE_FUNCTION(execOnDeath);
 
 
@@ -57,6 +58,7 @@ public: \
 	typedef UHealthInterface UClassType; \
 	typedef IHealthInterface ThisClass; \
 	static void Execute_OnDeath(UObject* O); \
+	static void Execute_OnTakeDamage(UObject* O); \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 

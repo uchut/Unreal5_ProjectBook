@@ -60,6 +60,12 @@
     <ClCompile Include="..\..\Source\Dodgeball\DodgeballGameMode.h">
       <Filter>Source\Dodgeball</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\DodgeballPlayerController.cpp">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\DodgeballPlayerController.h">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Dodgeball\DodgeballProjectile.cpp">
       <Filter>Source\Dodgeball</Filter>
     </ClCompile>
@@ -82,6 +88,24 @@
       <Filter>Source\Dodgeball</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Dodgeball\HealthInterface.h">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\HUDWidget.cpp">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\HUDWidget.h">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\MusicManager.cpp">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\MusicManager.h">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\RestartWidget.cpp">
+      <Filter>Source\Dodgeball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball\RestartWidget.h">
       <Filter>Source\Dodgeball</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Dodgeball\VictoryBox.cpp">

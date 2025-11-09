@@ -113,7 +113,7 @@ UObject* (*const Z_Construct_UClass_ADodgeballCharacter_Statics::DependentSingle
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADodgeballCharacter_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ADodgeballCharacter_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_UHealthInterface_NoRegister, (int32)VTABLE_OFFSET(ADodgeballCharacter, IHealthInterface), false },  // 2312806298
+	{ Z_Construct_UClass_UHealthInterface_NoRegister, (int32)VTABLE_OFFSET(ADodgeballCharacter, IHealthInterface), false },  // 414425506
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_ADodgeballCharacter_Statics::ClassParams = {
 	&ADodgeballCharacter::StaticClass,
@@ -150,10 +150,10 @@ ADodgeballCharacter::~ADodgeballCharacter() {}
 struct Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADodgeballCharacter, ADodgeballCharacter::StaticClass, TEXT("ADodgeballCharacter"), &Z_Registration_Info_UClass_ADodgeballCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADodgeballCharacter), 3532204444U) },
+		{ Z_Construct_UClass_ADodgeballCharacter, ADodgeballCharacter::StaticClass, TEXT("ADodgeballCharacter"), &Z_Registration_Info_UClass_ADodgeballCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADodgeballCharacter), 2602124721U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_4198121489(TEXT("/Script/Dodgeball"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_2084014412(TEXT("/Script/Dodgeball"),
 	Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_DodgeballCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

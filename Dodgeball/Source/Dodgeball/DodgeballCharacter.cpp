@@ -14,7 +14,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "HealthComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
-//#include "DodgeballPlayerController.h"
+#include "DodgeballPlayerController.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ADodgeballCharacter
@@ -67,12 +67,20 @@ ADodgeballCharacter::ADodgeballCharacter()
 
 void ADodgeballCharacter::OnDeath_Implementation()
 {
-	/*ADodgeballPlayerController* PlayerController = Cast<ADodgeballPlayerController>(GetController());
+	ADodgeballPlayerController* PlayerController = Cast<ADodgeballPlayerController>(GetController());
 	if (PlayerController != nullptr)
 	{
 		PlayerController->ShowRestartWidget();
-	}*/
-	UKismetSystemLibrary::QuitGame(this, nullptr, EQuitPreference::Quit, true);
+	}
+}
+
+void ADodgeballCharacter::OnTakeDamage_Implementation()
+{
+	ADodgeballPlayerController* PlayerController = Cast<ADodgeballPlayerController>(GetController());
+	if (PlayerController != nullptr)
+	{
+		PlayerController->UpdateHealthPercent(HealthComponent->GetHealthPercent());
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////

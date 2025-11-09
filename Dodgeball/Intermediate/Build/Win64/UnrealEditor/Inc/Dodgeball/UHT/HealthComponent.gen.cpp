@@ -36,13 +36,7 @@ struct Z_Construct_UClass_UHealthComponent_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[] = {
 		{ "Category", "Health" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// The owner's initial and current amount health points\n" },
-#endif
 		{ "ModuleRelativePath", "HealthComponent.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The owner's initial and current amount health points" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Health;
@@ -98,10 +92,10 @@ UHealthComponent::~UHealthComponent() {}
 struct Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UHealthComponent, UHealthComponent::StaticClass, TEXT("UHealthComponent"), &Z_Registration_Info_UClass_UHealthComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHealthComponent), 3840678363U) },
+		{ Z_Construct_UClass_UHealthComponent, UHealthComponent::StaticClass, TEXT("UHealthComponent"), &Z_Registration_Info_UClass_UHealthComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHealthComponent), 3389360276U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthComponent_h_2370928745(TEXT("/Script/Dodgeball"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthComponent_h_527195698(TEXT("/Script/Dodgeball"),
 	Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal5_ProjectBook_Dodgeball_Source_Dodgeball_HealthComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
